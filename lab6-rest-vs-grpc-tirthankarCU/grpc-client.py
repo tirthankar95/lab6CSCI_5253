@@ -61,9 +61,9 @@ if __name__ == '__main__':
     cmd = sys.argv[2]
     reps = int(sys.argv[3])
 
-    addr = f"http://{host}:5000"
+    addr = f"{host}:5000"
     print(f"Running {reps} reps against {addr}")
-    with grpc.insecure_channel('localhost:50051') as channel:
+    with grpc.insecure_channel(addr) as channel:
         stub = lab6_pb2_grpc.RouteGuideStub(channel)
         if cmd == 'rawImage':
             start = time.perf_counter()

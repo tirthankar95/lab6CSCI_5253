@@ -46,15 +46,15 @@ git clone https://github.com/tirthankar95/lab6CSCI_5253.git
 
 |  Method 	| Local  	| Same-Zone  	|  Different Region 	|
 |-----------|-----------|---------------|-----------------------|
-|   REST add	|   2.55	|   	|  	   |
-|   gRPC add	|   0.52	|   	|    	|
-|   REST rawimg	|   4.59	|   	|   	|
+|   REST add	|   2.55	|   3.25	|  	   |
+|   gRPC add	|   0.75	|   	|    	|
+|   REST rawimg	|   4.77	|   33.16	|   	|
 |   gRPC rawimg	|   10.66    |   	|   	|
-|   REST dotproduct	|   3.23	|   	|  	|
-|   gRPC dotproduct	|   0.68	|   	|    	|
-|   REST jsonimg	|  79.72 	|   	|   	|
-|   gRPC jsonimg	|  25.62     |   	|   	|
-|   PING        |   0.42    |      |       |
+|   REST dotproduct	|   3.23	|   4.15	|  	|
+|   gRPC dotproduct	|   0.81	|   	|    	|
+|   REST jsonimg	|  78.01 	|   98.17	|   	|
+|   gRPC jsonimg	|  24.91     |   	|   	|
+|   PING        |   0.042    |      |       |
 | | | | |
 
 
