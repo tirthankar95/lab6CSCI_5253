@@ -35,7 +35,7 @@ def doAdd(stub,debug=False):
     if debug:
         print("Response is",response)
 
-def doDotProduct(stub,debug=True):
+def doDotProduct(stub,debug=False):
     ax=[random.random() for i in range(100)]
     bx=[random.random() for i in range(100)]
     data=lab6_pb2.dotProduct_m(a=ax,b=bx)

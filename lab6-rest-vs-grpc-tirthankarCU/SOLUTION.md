@@ -27,17 +27,36 @@ python grpc-client.py localhost dotProduct 100
 
 python grpc-client.py localhost jsonImage 100
 
+# Python Update in VM and git pull 
+sudo add-apt-repository universe
+
+sudo apt update
+
+sudo apt install python3-pip
+
+pip3 install Flask
+
+pip3 install jsonpickle
+
+pip3 install pillow
+
+pip3 install numpy
+
+git clone https://github.com/tirthankar95/lab6CSCI_5253.git
+
 |  Method 	| Local  	| Same-Zone  	|  Different Region 	|
-|---	|---	|---	|---	|---	|
-|   REST add	|   	|   	|  	|
-|   gRPC add	|   	|   	|    	|
-|   REST rawimg	|   	|   	|   	|
-|   gRPC rawimg	|       |   	|   	|
-|   REST dotproduct	|   	|   	|  	|
-|   gRPC dotproduct	|   	|   	|    	|
-|   REST jsonimg	|   	|   	|   	|
-|   gRPC jsonimg	|       |   	|   	|
-|   PING        |       |      |       |
+|-----------|-----------|---------------|-----------------------|
+|   REST add	|   2.55	|   	|  	   |
+|   gRPC add	|   0.52	|   	|    	|
+|   REST rawimg	|   4.59	|   	|   	|
+|   gRPC rawimg	|   10.66    |   	|   	|
+|   REST dotproduct	|   3.23	|   	|  	|
+|   gRPC dotproduct	|   0.68	|   	|    	|
+|   REST jsonimg	|  79.72 	|   	|   	|
+|   gRPC jsonimg	|  25.62     |   	|   	|
+|   PING        |   0.42    |      |       |
+| | | | |
+
 
 You should measure the basic latency  using the `ping` command - this can be construed to be the latency without any RPC or python overhead.
 
