@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.routeguide";
+option java_outer_classname = "RouteGuideProto";
+option objc_class_prefix = "RTG";
+
+package routeguide;
+
+// Interface exported by the server.
+service RouteGuide {
+  rpc add(add_m) returns (add_r) {}
+  rpc rawImage(rawImage_m) returns (rawImage_r) {}
+  rpc dotProduct(dotProduct_m) returns (dotProduct_r) {}
+  rpc jsonImage(jsonImage_m) returns (jsonImage_r) {}
+}
+
+message add_m {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message add_r {
+    int32 a = 1;
+}
+
+message rawImage_m{
+    bytes img = 1;
+}
+
+message rawImage_r{
+    int32 a = 1;
+    int32 b = 2;
+}
+
+message dotProduct_m{
+    repeated float a = 1;
+    repeated float b = 2;
+}
+
+message dotProduct_r{
+    float a = 1;
+}
+
+message jsonImage_m{
+    string img = 1;
+}
+
+message jsonImage_r{
+    int32 a = 1;
+    int32 b = 2;
+}
